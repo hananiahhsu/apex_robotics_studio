@@ -1,0 +1,5 @@
+<package format="3">
+  <name>demo_description_pkg</name>
+  <version>0.0.1</version>
+  <description>Demo description package</description>
+</package>

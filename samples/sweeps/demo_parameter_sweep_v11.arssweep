@@ -1,0 +1,11 @@
+; ApexRoboticsStudio parameter sweep
+[sweep]
+schema_version=1
+name=Cycle Time and Safety Radius Sweep
+base_project=../projects/demo_workcell_v10_pass.arsproject
+runtime=../../config/runtime_v11.ini
+plugin_dir=../plugins
+output_dir=demo_sweep_workspace_v11
+sample_counts=12,16,20
+duration_scales=0.850000,1.000000,1.150000
+safety_radii=0.060000,0.080000

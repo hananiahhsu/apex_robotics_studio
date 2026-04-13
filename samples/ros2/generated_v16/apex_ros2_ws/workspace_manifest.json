@@ -1,0 +1,11 @@
+{
+  "project_name": "ApexPainterV16 imported project",
+  "robot_name": "ApexPainterV16",
+  "packages": [
+    "apexpainterv16_imported_project_description",
+    "apexpainterv16_imported_project_bringup",
+    "apexpainterv16_imported_project_moveit_config",
+    "apexpainterv16_imported_project_moveit_task_demo"
+  ],
+  "description_package_dependencies": ["demo_support"]
+}

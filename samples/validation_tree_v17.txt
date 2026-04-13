@@ -1,0 +1,24 @@
+ApexRoboticsStudio 1.7.0
+Robotics workstation interview project
+
+Project Catalog
+- [project] ApexPainterV16 imported project :: schema=5
+  - [robot] ApexPainterV16 :: 2 joints
+    - [description] xacro :: /tmp/apex_v17_work/apex_robotics_studio_v17/samples/xacro/demo_painter_cell_v17.xacro
+    - [packages] Description Packages :: 1 entries
+      - [package] demo_support :: robot description dependency
+    - [joint] joint_2 :: link=0.840m range=[-89.954, 89.954]deg
+    - [joint] joint_1 :: link=0.420m range=[-89.954, 89.954]deg
+  - [meshes] Robot Mesh Resources :: 2 entries
+    - [visual_mesh] base_link :: package://demo_support/meshes/tool.stl scale=(1.000, 1.000, 1.000) package=demo_support resolved=/tmp/apex_v17_work/apex_robotics_studio_v17/samples/robot_description_packages/demo_support/meshes/tool.stl
+    - [visual_mesh] joint_1_tool :: package://demo_support/meshes/tool.stl scale=(1.000, 1.000, 1.000) package=demo_support resolved=/tmp/apex_v17_work/apex_robotics_studio_v17/samples/robot_description_packages/demo_support/meshes/tool.stl
+  - [motion] Primary Motion :: 20 samples
+    - [state] Start :: 0.0, 0.0
+    - [state] Goal :: 20.0, -15.0
+  - [workcell] Obstacles :: 2 entries
+    - [obstacle] ImportedFixture :: min=(0.550, 0.100, -0.200) max=(0.850, 0.350, 0.200)
+    - [obstacle] SafetyZone :: min=(0.950, -0.800, -0.500) max=(1.100, 0.800, 0.500)
+  - [job] Imported Robot Dry Run :: 1 segments
+    - [waypoint] Home :: 0.0, 0.0
+    - [waypoint] Approach :: 10.0, -10.0
+    - [segment] ImportedMove :: Home -> Approach | samples=12 | duration=2s | tag=dry_run

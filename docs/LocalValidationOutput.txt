@@ -1,0 +1,33 @@
+ApexRoboticsStudio v0.6 Local Validation
+=====================================
+
+Host environment validated in this workspace:
+- Linux x86_64
+- CMake + Ninja
+- Release configure/build/test/install/package
+
+Commands executed successfully:
+1. cmake -S . -B out/build/linux-ninja-release -G Ninja -DCMAKE_BUILD_TYPE=Release
+2. cmake --build out/build/linux-ninja-release -j4
+3. ctest --test-dir out/build/linux-ninja-release --output-on-failure
+4. ./out/build/linux-ninja-release/apex_robotics_studio export-demo-batch demo_validation.arsbatch
+5. ./out/build/linux-ninja-release/apex_robotics_studio run-batch demo_validation.arsbatch
+6. ./out/build/linux-ninja-release/apex_robotics_studio report-batch demo_validation.arsbatch demo_validation.html
+7. ./out/build/linux-ninja-release/apex_robotics_studio bundle-project demo_workcell_v06.arsproject runtime_v06.ini demo_bundle
+8. ./out/build/linux-ninja-release/apex_robotics_studio run-bundle demo_bundle
+9. ./out/build/linux-ninja-release/apex_robotics_studio list-plugins demo_bundle/plugins
+10. cmake --install out/build/linux-ninja-release --prefix out/install/linux-release
+11. cpack --config out/build/linux-ninja-release/CPackConfig.cmake -B out/packages
+
+Artifacts produced locally:
+- out/packages/ApexRoboticsStudio-0.6.0-Linux.zip
+- out/packages/ApexRoboticsStudio-0.6.0-Linux.tar.gz
+- bundle folder with project/runtime/plugin layout
+- batch HTML report
+
+Not executed in this environment:
+- Windows native build
+- Linux -> Windows cross runtime validation
+- Linux -> ARM64 runtime validation
+- Docker image build execution
+- GitHub Actions remote execution

@@ -1,0 +1,9 @@
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <link name="tool_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://demo_description_pkg/meshes/tool.stl" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>

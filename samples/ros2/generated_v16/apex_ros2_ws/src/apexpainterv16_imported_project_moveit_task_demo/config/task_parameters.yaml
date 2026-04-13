@@ -1,0 +1,4 @@
+task_demo:
+  ros__parameters:
+    planning_group: "manipulator"
+    scenario: "generated_demo"

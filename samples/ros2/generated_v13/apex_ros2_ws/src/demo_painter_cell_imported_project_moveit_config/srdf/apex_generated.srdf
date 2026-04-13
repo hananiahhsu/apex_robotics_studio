@@ -1,0 +1,8 @@
+<robot name="demo_painter_cell">
+  <group name="manipulator">
+    <joint name="shoulder_joint"/>
+  </group>
+  <group_state name="ready" group="manipulator">
+    <joint name="shoulder_joint" value="0"/>
+  </group_state>
+</robot>

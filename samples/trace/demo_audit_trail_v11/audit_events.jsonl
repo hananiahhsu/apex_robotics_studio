@@ -1,0 +1,3 @@
+{"sequence":1,"category":"audit","level":"info","action":"load_project","message":"Loaded project for audit review."}
+{"sequence":2,"category":"audit","level":"info","action":"plugin_audit","message":"Collected 2 audit findings."}
+{"sequence":3,"category":"audit","level":"info","action":"release_gate","message":"Gate status: pass"}

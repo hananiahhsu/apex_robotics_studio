@@ -1,0 +1,63 @@
+ApexRoboticsStudio v0.8.0 local validation
+
+Environment
+- Host OS: Linux container
+- Generator: Ninja
+- Compiler: GCC (C++17)
+- Configuration: Debug
+
+Executed commands
+1. Configure
+   cmake -S . -B out/build/linux-debug-v08 -G Ninja -DCMAKE_BUILD_TYPE=Debug -DARS_ENABLE_TESTS=ON -DARS_STRICT_WARNINGS=ON
+
+2. Build
+   cmake --build out/build/linux-debug-v08 -j4
+
+3. Test
+   ctest --output-on-failure
+
+4. Install
+   cmake --install out/build/linux-debug-v08 --prefix out/install/v08
+
+5. Package
+   cpack
+
+6. Sample project and runtime generation
+   ./apex_robotics_studio export-demo-project samples/projects/demo_workcell_v08.arsproject
+   ./apex_robotics_studio export-runtime-config config/runtime_v08.ini
+
+7. New v0.8 recipe / patch chain
+   ./apex_robotics_studio export-demo-recipe samples/recipes/painting_standard.arsrecipe
+   ./apex_robotics_studio export-demo-patch samples/patches/shift_fixture.arspatch
+   ./apex_robotics_studio apply-recipe samples/projects/demo_workcell_v08.arsproject samples/recipes/painting_standard.arsrecipe samples/projects/demo_workcell_recipe_applied_v08.arsproject
+   ./apex_robotics_studio apply-project-patch samples/projects/demo_workcell_v08.arsproject samples/patches/shift_fixture.arspatch samples/projects/demo_workcell_patched_v08.arsproject
+   ./apex_robotics_studio diff-project samples/projects/demo_workcell_v08.arsproject samples/projects/demo_workcell_patched_v08.arsproject samples/diff/demo_workcell_patch_diff_v08.txt
+   ./apex_robotics_studio gate-project samples/projects/demo_workcell_v08.arsproject samples/gates/demo_release_gate_v08.html config/runtime_v08.ini
+
+8. Existing workstation chain revalidated
+   ./apex_robotics_studio project-tree samples/projects/demo_workcell_v08.arsproject > samples/workstation/demo_project_tree_v08.txt
+   ./apex_robotics_studio dashboard-project samples/projects/demo_workcell_v08.arsproject samples/workstation/demo_workstation_dashboard_v08.html config/runtime_v08.ini
+   ./apex_robotics_studio record-job-session samples/projects/demo_workcell_v08.arsproject samples/workstation/apex_session_v08 config/runtime_v08.ini
+
+Observed results
+- Configure: success
+- Build: success
+- Tests: success
+- Install: success
+- Packaging: success
+- Recipe application: success
+- Patch application: success
+- Diff report generation: success
+- Gate report generation: success
+- Dashboard generation: success
+- Session export: success
+
+Packages produced
+- ApexRoboticsStudio-0.8.0-Linux.zip
+- ApexRoboticsStudio-0.8.0-Linux.tar.gz
+
+Important scope note
+- Linux native toolchain was actually executed and verified.
+- Windows native build was not executed in this environment.
+- Linux -> Windows and Linux -> ARM64 cross-compilation artifacts were not re-run in this environment during the v0.8 enhancement round.
+- Optional Qt frontend was not compiled here because this environment does not provide a Qt SDK.

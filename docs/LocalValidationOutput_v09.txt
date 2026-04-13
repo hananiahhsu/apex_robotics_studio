@@ -1,0 +1,33 @@
+ApexRoboticsStudio v0.9 local validation
+
+Environment
+- Linux container build
+- CMake configure: PASS
+- CMake build: PASS
+- CTest: PASS
+- CMake install: PASS
+- CPack ZIP/TGZ: PASS
+
+Validated commands
+- export-demo-template
+- instantiate-template
+- export-demo-project
+- export-demo-patch
+- apply-project-patch
+- regress-project
+- create-delivery-dossier
+
+Generated sample artifacts
+- samples/templates/paint_cell_template_v09.arstemplate
+- samples/projects/instantiated_from_template_v09.arsproject
+- samples/projects/demo_workcell_v09.arsproject
+- samples/projects/demo_workcell_candidate_v09.arsproject
+- samples/regression/demo_project_regression_v09.html
+- samples/delivery/demo_delivery_dossier_v09/index.html
+- samples/delivery/demo_delivery_dossier_v09/delivery_manifest.json
+
+Not executed in this environment
+- Windows native build execution
+- Linux -> Windows cross target runtime execution
+- Linux -> ARM64 cross target runtime execution
+- Qt frontend build execution

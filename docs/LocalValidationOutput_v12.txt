@@ -1,0 +1,35 @@
+ApexRoboticsStudio v1.2 Local Validation
+=======================================
+
+Environment:
+- Linux container
+- Qt SDK not installed
+- ROS 2 / MoveIt toolchains not installed
+
+Validated commands:
+1. cmake -S . -B out/build/v12 -DCMAKE_BUILD_TYPE=Release -DARS_ENABLE_TESTS=ON -DARS_ENABLE_QT_FRONTEND=OFF
+2. cmake --build out/build/v12 -j2
+3. ctest --test-dir out/build/v12 --output-on-failure
+4. out/build/v12/apex_robotics_studio import-robot-description samples/xacro/demo_painter_cell.xacro samples/projects/imported_from_xacro_v12.arsproject
+5. out/build/v12/apex_robotics_studio export-ros2-workspace samples/projects/imported_from_xacro_v12.arsproject samples/ros2/generated
+6. out/build/v12/apex_robotics_studio project-tree samples/projects/imported_from_xacro_v12.arsproject
+7. cmake --install out/build/v12 --prefix out/install/v12
+8. (cd out/build/v12 && cpack)
+
+Observed results:
+- Configure: PASS
+- Build: PASS
+- Tests: PASS
+- Xacro import: PASS
+- Mesh resource capture: PASS (2 mesh resources captured from sample)
+- ROS 2 workspace export: PASS
+- Install: PASS
+- CPack ZIP/TGZ generation: PASS
+
+Not validated in this environment:
+- Qt frontend build/run
+- ROS 2 workspace compilation
+- MoveIt runtime integration
+- Windows native build
+- Linux -> Windows runtime validation
+- Linux -> ARM64 runtime validation

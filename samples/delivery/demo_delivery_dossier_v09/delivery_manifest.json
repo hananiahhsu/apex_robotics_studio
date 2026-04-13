@@ -1,0 +1,16 @@
+{
+  "title": "ApexRoboticsStudio Delivery Dossier",
+  "project_name": "Demo Workcell Interview Scenario",
+  "gate_status": "FAIL",
+  "session_status": "warning",
+  "artifacts": [
+    {"type": "project", "relative_path": "input/demo_workcell_v09.arsproject", "description": "Copied project input"},
+    {"type": "config", "relative_path": "config/runtime.ini", "description": "Runtime configuration used for validation"},
+    {"type": "dashboard", "relative_path": "reports/workstation_dashboard.html", "description": "Workbench dashboard"},
+    {"type": "gate", "relative_path": "reports/release_gate.html", "description": "Release gate evaluation"},
+    {"type": "report", "relative_path": "reports/job_report.html", "description": "Detailed job report"},
+    {"type": "svg", "relative_path": "reports/project_layout.svg", "description": "Top-view layout and TCP path"},
+    {"type": "session", "relative_path": "session/session_summary.html", "description": "Execution session summary"},
+    {"type": "session", "relative_path": "session/session_summary.json", "description": "Execution session JSON summary"}
+  ]
+}

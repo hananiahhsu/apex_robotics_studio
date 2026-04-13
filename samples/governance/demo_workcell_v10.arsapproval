@@ -1,0 +1,39 @@
+; ApexRoboticsStudio approval workflow
+[approval]
+schema_version=1
+title=Demo Workcell Interview Scenario Approval Workflow
+project_name=Demo Workcell Interview Scenario
+
+[required_role]
+name=robotics_lead
+
+[required_role]
+name=process_owner
+
+[required_role]
+name=qa
+
+[entry]
+role=robotics_lead
+signer=alice
+decision=approved
+timestamp_utc=2026-04-11T08:33:00Z
+project_fingerprint=ecdfabb358b63c10
+notes=Lead approval
+
+[entry]
+role=process_owner
+signer=bob
+decision=approved
+timestamp_utc=2026-04-11T08:33:00Z
+project_fingerprint=ecdfabb358b63c10
+notes=Process approval
+
+[entry]
+role=qa
+signer=carol
+decision=approved
+timestamp_utc=2026-04-11T08:33:00Z
+project_fingerprint=ecdfabb358b63c10
+notes=QA approval
+

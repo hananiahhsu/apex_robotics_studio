@@ -1,0 +1,24 @@
+<robot name="demo_painter_cell" >
+  
+  
+  
+
+  <link name="base_link"/>
+  
+    <link name="arm_link">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://demo_painter_cell_imported_project_description/meshes/imported/base.dae" scale="1 1 1"/>
+        </geometry>
+      </visual>
+    </link>
+    <joint name="shoulder_joint" type="revolute">
+      <parent link="base_link"/>
+      <child link="arm_link"/>
+      <origin xyz="0.580000 0 0" rpy="0 0 0"/>
+      <axis xyz="0 0 1"/>
+      <limit lower="-1.57" upper="1.57" effort="40" velocity="1.5"/>
+    </joint>
+  
+</robot>

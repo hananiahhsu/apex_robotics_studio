@@ -1,0 +1,8 @@
+{
+  "names": {
+    "apexpainterv16_imported_project_description": { "cmake-args": ["-DCMAKE_BUILD_TYPE=Release"] },
+    "apexpainterv16_imported_project_bringup": { "cmake-args": ["-DCMAKE_BUILD_TYPE=Release"] },
+    "apexpainterv16_imported_project_moveit_config": { "cmake-args": ["-DCMAKE_BUILD_TYPE=Release"] },
+    "apexpainterv16_imported_project_moveit_task_demo": { "cmake-args": ["-DCMAKE_BUILD_TYPE=Release"] }
+  }
+}

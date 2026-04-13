@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect x="0" y="0" width="100%" height="100%" fill="#0b1320"/>
+  <text x="40" y="44" fill="#f5f7fa" font-size="28" font-family="Arial">Demo Workcell Interview Scenario Delivery Dossier</text>
+  <text x="40" y="72" fill="#9fb3c8" font-size="16" font-family="Arial">Robot: Apex Painter 6A | Obstacles: 4 | Segments: 4</text>
+  <rect x="256.842" y="274.737" width="107.368" height="107.368" fill="#364152" stroke="#8aa1b6" stroke-width="2" opacity="0.9"/>
+  <rect x="507.368" y="95.7895" width="53.6842" height="644.211" fill="#364152" stroke="#8aa1b6" stroke-width="2" opacity="0.9"/>
+  <rect x="149.474" y="578.947" width="214.737" height="89.4737" fill="#364152" stroke="#8aa1b6" stroke-width="2" opacity="0.9"/>
+  <rect x="382.105" y="77.8947" width="125.263" height="143.158" fill="#364152" stroke="#8aa1b6" stroke-width="2" opacity="0.9"/>
+  <polyline fill="none" stroke="#2dd4bf" stroke-width="4" points="581.339,268.807 577.876,255.31 574.019,241.911 569.769,228.625 565.131,215.463 560.108,202.437 554.706,189.561 548.93,176.845 542.784,164.302 536.275,151.944 529.409,139.782 522.193,127.827"/>
+  <text x="589.339" y="260.807" fill="#2dd4bf" font-size="14" font-family="Arial">MoveToApproach</text>
+  <polyline fill="none" stroke="#60a5fa" stroke-width="4" points="522.193,127.827 521.91,126.249 521.589,124.697 521.229,123.171 520.83,121.671 520.393,120.197 519.916,118.748 519.399,117.326 518.844,115.929 518.249,114.558 517.614,113.213 516.94,111.893 516.226,110.599 515.472,109.331 514.678,108.088 513.845,106.87 512.971,105.678 512.057,104.511"/>
+  <text x="530.193" y="119.827" fill="#60a5fa" font-size="14" font-family="Arial">PaintStrokeA</text>
+  <polyline fill="none" stroke="#f59e0b" stroke-width="4" points="512.057,104.511 511.556,103.732 511.041,102.961 510.514,102.197 509.973,101.44 509.42,100.691 508.855,99.9492 508.276,99.2152 507.685,98.4889 507.082,97.7702 506.466,97.0594 505.837,96.3564 505.196,95.6614 504.542,94.9743 503.876,94.2953 503.198,93.6243 502.507,92.9615 501.805,92.307"/>
+  <text x="520.057" y="96.5108" fill="#f59e0b" font-size="14" font-family="Arial">PaintStrokeB</text>
+  <polyline fill="none" stroke="#f472b6" stroke-width="4" points="501.805,92.307 507.721,97.9243 513.274,103.823 518.457,109.994 523.261,116.427 527.679,123.112 531.704,130.038 535.331,137.194 538.552,144.569 541.363,152.152 543.757,159.931 545.732,167.893"/>
+  <text x="509.805" y="84.307" fill="#f472b6" font-size="14" font-family="Arial">MoveToHome</text>
+  <polyline fill="none" stroke="#93c5fd" stroke-width="5" points="60,417.895 221.053,417.895 342.048,385.474 429.999,323.89 497.261,299.409 547.707,281.048 581.339,268.807"/>
+  <polyline fill="none" stroke="#fde68a" stroke-width="5" points="60,417.895 216.269,378.933 330.702,327.983 415.31,261.881 476.012,223.95 518.316,190.898 545.732,167.893"/>
+</svg>

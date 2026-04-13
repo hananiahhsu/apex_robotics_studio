@@ -1,0 +1,20 @@
+; ApexRoboticsStudio process recipe
+
+[recipe]
+name=Automotive Painting Standard
+process_family=painting
+owner=manufacturing.engineering
+notes=Standardized spray-cell defaults for interview demo and product prototype.
+process_tag_prefix=paint
+
+[motion]
+default_sample_count=20
+segment_duration_scale=1.15
+link_safety_radius=0.09
+
+[quality_gate]
+max_peak_tcp_speed_mps=1.4
+max_average_tcp_speed_mps=0.9
+preferred_joint_velocity_limit_rad_per_sec=1.2
+max_warning_findings=1
+require_collision_free=true

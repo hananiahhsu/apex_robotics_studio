@@ -1,0 +1,1 @@
+Panels:\n  - Class: rviz_common/Displays\nVisualization Manager:\n  Class: \"\"\n  Displays:\n    - Class: rviz_default_plugins/Grid\n      Name: Grid\n    - Class: rviz_default_plugins/RobotModel\n      Name: Robot Model\n      Robot Description: robot_description\n    - Class: rviz_default_plugins/TF\n      Name: TF\n

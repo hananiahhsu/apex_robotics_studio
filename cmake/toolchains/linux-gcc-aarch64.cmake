@@ -1,0 +1,38 @@
+set(CMAKE_SYSTEM_NAME Linux)
+set(CMAKE_SYSTEM_PROCESSOR aarch64)
+set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
+
+set(_ars_triplet "aarch64-linux-gnu")
+
+if(DEFINED ENV{ARS_AARCH64_GCC_ROOT} AND NOT "$ENV{ARS_AARCH64_GCC_ROOT}" STREQUAL "")
+    set(_ars_tools_root "$ENV{ARS_AARCH64_GCC_ROOT}")
+    set(CMAKE_C_COMPILER "${_ars_tools_root}/bin/${_ars_triplet}-gcc")
+    set(CMAKE_CXX_COMPILER "${_ars_tools_root}/bin/${_ars_triplet}-g++")
+    set(CMAKE_AR "${_ars_tools_root}/bin/${_ars_triplet}-ar")
+    set(CMAKE_RANLIB "${_ars_tools_root}/bin/${_ars_triplet}-ranlib")
+    set(CMAKE_STRIP "${_ars_tools_root}/bin/${_ars_triplet}-strip")
+else()
+    set(CMAKE_C_COMPILER ${_ars_triplet}-gcc)
+    set(CMAKE_CXX_COMPILER ${_ars_triplet}-g++)
+    set(CMAKE_AR ${_ars_triplet}-ar)
+    set(CMAKE_RANLIB ${_ars_triplet}-ranlib)
+    set(CMAKE_STRIP ${_ars_triplet}-strip)
+endif()
+
+if(DEFINED ENV{ARS_AARCH64_SYSROOT} AND NOT "$ENV{ARS_AARCH64_SYSROOT}" STREQUAL "")
+    set(CMAKE_SYSROOT "$ENV{ARS_AARCH64_SYSROOT}")
+    list(APPEND CMAKE_FIND_ROOT_PATH "$ENV{ARS_AARCH64_SYSROOT}")
+endif()
+
+if(DEFINED ENV{ARS_CROSS_STAGING_PREFIX} AND NOT "$ENV{ARS_CROSS_STAGING_PREFIX}" STREQUAL "")
+    set(CMAKE_STAGING_PREFIX "$ENV{ARS_CROSS_STAGING_PREFIX}")
+endif()
+
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
+
+if(DEFINED ENV{ARS_CROSS_EMULATOR} AND NOT "$ENV{ARS_CROSS_EMULATOR}" STREQUAL "")
+    set(CMAKE_CROSSCOMPILING_EMULATOR "$ENV{ARS_CROSS_EMULATOR}" CACHE STRING "Cross-compiling emulator")
+endif()

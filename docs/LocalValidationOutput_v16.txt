@@ -1,0 +1,40 @@
+ApexRoboticsStudio v1.6 local validation
+
+1. Configure
+   cmake -S . -B out/build/v16 -DCMAKE_BUILD_TYPE=Debug
+
+2. Build
+   cmake --build out/build/v16 --target apex_robotics_studio_tests apex_robotics_studio -j1
+
+3. Test
+   ctest --test-dir out/build/v16 --output-on-failure
+   Result: passed
+
+4. Import robot description
+   ./out/build/v16/apex_robotics_studio import-robot-description      samples/xacro/demo_painter_cell_v16.xacro      samples/projects/imported_from_xacro_v16.arsproject
+   Result: passed
+
+5. Inspect project tree
+   ./out/build/v16/apex_robotics_studio project-tree      samples/projects/imported_from_xacro_v16.arsproject
+   Result: passed
+
+6. Export ROS2 workspace
+   ./out/build/v16/apex_robotics_studio export-ros2-workspace      samples/projects/imported_from_xacro_v16.arsproject      samples/ros2/generated_v16
+   Result: passed
+
+7. Install
+   cmake --install out/build/v16 --prefix out/install/v16
+   Result: passed
+
+8. Package
+   cpack --config out/build/v16/CPackConfig.cmake
+   Result: passed
+   Packages:
+   - ApexRoboticsStudio-1.6.0-Linux.zip
+   - ApexRoboticsStudio-1.6.0-Linux.tar.gz
+
+Not validated in this environment:
+- Qt frontend compile/run
+- ROS2/MoveIt workspace compile/run in a real ROS2 SDK
+- Windows runtime
+- cross-compiled artifact runtime

@@ -1,0 +1,15 @@
+{
+  "project_name": "ApexPainterV16 imported project",
+  "robot_name": "ApexPainterV16",
+  "source_kind": "xacro",
+  "source_path": "/tmp/apex_v17_work/apex_robotics_studio_v17/samples/xacro/demo_painter_cell_v17.xacro",
+  "expanded_description_path": "samples/projects/imported_from_xacro_v17.expanded.urdf",
+  "package_dependency_count": 1,
+  "mesh_resource_count": 2,
+  "resolved_mesh_count": 2,
+  "missing_mesh_count": 0,
+  "package_dependencies": ["demo_support"],
+  "missing_mesh_uris": [],
+  "duplicate_mesh_uris": ["package://demo_support/meshes/tool.stl"],
+  "notes": []
+}

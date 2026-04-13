@@ -1,0 +1,7 @@
+<package format="3">
+  <name>demo_support</name>
+  <version>0.1.0</version>
+  <description>Demo support package for Apex Robotics Studio samples.</description>
+  <maintainer email="demo@example.com">Apex Robotics Studio</maintainer>
+  <license>MIT</license>
+</package>

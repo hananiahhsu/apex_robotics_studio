@@ -1,0 +1,53 @@
+ApexRoboticsStudio v1.5 local validation
+
+1. Configure
+   cmake -S . -B out/build/v15dbg -DCMAKE_BUILD_TYPE=Debug
+
+2. Build
+   cmake --build out/build/v15dbg -j1 --target apex_robotics_studio_tests apex_robotics_studio
+   cmake --build out/build/v15dbg -j1 --target apex_audit_tool_sample
+
+3. Test aggregate
+   ctest --test-dir out/build/v15dbg --output-on-failure
+   Result: passed
+
+4. Test executable summary
+   ./out/build/v15dbg/apex_robotics_studio_tests
+   Result: Total 36, Failed 0
+
+5. Xacro import validation
+   export ROS_PACKAGE_PATH=$PWD/samples/robot_description_packages
+   export APEX_ENABLE_SECOND_JOINT=1
+   unset APEX_DISABLE_FIRST_JOINT
+   ./out/build/v15dbg/apex_robotics_studio import-robot-description \
+     samples/xacro/demo_painter_cell_v15.xacro \
+     samples/projects/imported_from_xacro_v15.arsproject
+
+6. Project catalog validation
+   ./out/build/v15dbg/apex_robotics_studio project-tree \
+     samples/projects/imported_from_xacro_v15.arsproject
+
+7. ROS2 workspace export validation
+   ./out/build/v15dbg/apex_robotics_studio export-ros2-workspace \
+     samples/projects/imported_from_xacro_v15.arsproject \
+     samples/ros2/generated_v15
+
+8. Install
+   cmake --install out/build/v15dbg --prefix out/install/v15dbg
+
+9. Package
+   cpack --config out/build/v15dbg/CPackConfig.cmake
+   Generated:
+   - ApexRoboticsStudio-1.5.0-Linux.zip
+   - ApexRoboticsStudio-1.5.0-Linux.tar.gz
+
+Actually validated here:
+- importer enhancement with xacro conditionals and env/optenv tokens
+- project-tree output after import
+- ROS2/MoveIt workspace export
+- install and package
+
+Not validated here:
+- Qt frontend build/runtime
+- generated ROS2 workspace build/runtime in a real ROS2/MoveIt environment
+- Windows runtime validation

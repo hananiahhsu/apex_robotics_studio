@@ -1,0 +1,5 @@
+; ApexRoboticsStudio external audit plugin manifest
+[plugin]
+name=SampleSafetyAudit
+executable=apex_audit_tool_sample
+arguments=audit {project} {output}

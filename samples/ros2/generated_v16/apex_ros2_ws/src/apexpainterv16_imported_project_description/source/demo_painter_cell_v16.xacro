@@ -1,0 +1,13 @@
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ApexPainterV16">
+  <xacro:arg name="joint_length" default="0.42"/>
+  <xacro:arg name="enable_mesh" default="true"/>
+  <xacro:include filename="$(find demo_support)/urdf/tooling.xacro"/>
+  <link name="base_link"/>
+  <xacro:property name="sample_root" value="$(dirname)"/>
+  <xacro:if value="$(optenv APEX_ENABLE_SECOND_JOINT 1)">
+    <xacro:paint_joint joint_name="joint_2" joint_length="${joint_length * 2.0}" enable_mesh="$(arg enable_mesh)"/>
+  </xacro:if>
+  <xacro:unless value="$(env APEX_DISABLE_FIRST_JOINT)">
+    <xacro:paint_joint joint_name="joint_1" joint_length="${joint_length}" enable_mesh="$(arg enable_mesh)"/>
+  </xacro:unless>
+</robot>

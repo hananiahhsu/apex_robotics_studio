@@ -1,0 +1,33 @@
+ApexRoboticsStudio v1.3 Local Validation
+
+Environment
+- Host: Linux container
+- Generator: Unix Makefiles
+- Build type: Release
+
+Validated successfully
+1. CMake configure for v1.3 source tree
+2. Incremental target builds:
+   - apex_robotics_studio_tests
+   - apex_robotics_studio
+   - apex_audit_tool_sample
+3. Full CTest pass:
+   - 34 tests passed
+4. CLI validation chain:
+   - import-robot-description on samples/xacro/demo_painter_cell_v13.xacro
+   - project-tree on generated imported_from_xacro_v13.arsproject
+   - export-ros2-workspace on generated imported_from_xacro_v13.arsproject
+5. Install step
+6. CPack package generation
+
+Key observations
+- Xacro import resolved a mesh from package://demo_description/meshes/base.dae
+- Imported project serialized schema_version=5 with mesh resolved_path and package_name
+- ROS 2 export generated description / bringup / moveit_config packages
+- Exported URDF rewrote mesh URI into the generated *_description package
+
+Not validated in this environment
+- Qt frontend build and runtime (Qt SDK not installed)
+- Building generated ROS 2 workspace against a real ROS 2 / MoveIt installation
+- Windows native build
+- Runtime execution of cross-compiled artifacts

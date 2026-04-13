@@ -1,0 +1,19 @@
+<package format="3">
+  <name>demo_painter_cell_imported_project_moveit_config</name>
+  <version>0.1.0</version>
+  <description>Apex Robotics Studio generated MoveIt 2 skeleton package.</description>
+  <maintainer email="demo@example.com">Apex Robotics Studio</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend>
+  <depend>moveit_ros_planning_interface</depend>
+  <depend>moveit_visual_tools</depend>
+  <depend>geometry_msgs</depend>
+  <depend>moveit_msgs</depend>
+  <exec_depend>demo_painter_cell_imported_project_description</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

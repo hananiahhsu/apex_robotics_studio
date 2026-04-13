@@ -1,0 +1,5 @@
+segment_name,process_tag,duration_seconds,path_length_meters,collision_free
+MoveToApproach,approach,2,0.429002,1
+PaintStrokeA,spray,2.5,0.0718517,1
+PaintStrokeB,spray,2.5,0.0446654,1
+MoveToHome,retreat,2,0.248317,1

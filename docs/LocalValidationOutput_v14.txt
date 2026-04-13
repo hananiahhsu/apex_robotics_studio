@@ -1,0 +1,65 @@
+ApexRoboticsStudio v1.4 local validation
+=======================================
+
+Environment
+-----------
+- Linux container
+- CMake configure/build in Debug mode for validation stability
+- Qt SDK not present
+- ROS2 / MoveIt SDK not present
+
+Validated commands
+------------------
+1. Configure
+   cmake -S . -B out/build/v14dbg -DCMAKE_BUILD_TYPE=Debug
+
+2. Build tests and app
+   cmake --build out/build/v14dbg -j1 --target apex_robotics_studio_tests apex_robotics_studio
+
+3. Run tests
+   ./out/build/v14dbg/apex_robotics_studio_tests
+   Result: Total 35, Failed 0
+
+4. Build audit tool used by install/package
+   cmake --build out/build/v14dbg -j1 --target apex_audit_tool_sample
+
+5. Xacro import validation
+   export ROS_PACKAGE_PATH=$PWD/samples/xacro_ws/src
+   export APEX_DEMO_ROBOT_NAME=ApexPainterV14
+   ./out/build/v14dbg/apex_robotics_studio import-robot-description \
+     samples/xacro/demo_painter_cell_v14.xacro \
+     samples/projects/imported_from_xacro_v14.arsproject
+
+   Observed:
+   - Xacro input imported successfully
+   - 2 revolute joints imported
+   - 2 mesh resources captured
+   - expanded URDF generated
+
+6. ROS2 workspace export validation
+   ./out/build/v14dbg/apex_robotics_studio export-ros2-workspace \
+     samples/projects/imported_from_xacro_v14.arsproject \
+     samples/ros2/generated_v14
+
+   Observed:
+   - description package generated
+   - bringup package generated
+   - moveit_config package generated
+   - scene_objects.yaml generated
+   - apex_scene_loader_node.cpp generated
+   - moveit_demo.rviz generated
+
+7. Install and package
+   cmake --install out/build/v14dbg --prefix out/install/v14dbg
+   cpack --config out/build/v14dbg/CPackConfig.cmake
+
+   Generated packages:
+   - ApexRoboticsStudio-1.4.0-Linux.zip
+   - ApexRoboticsStudio-1.4.0-Linux.tar.gz
+
+Not validated in this environment
+---------------------------------
+- Qt workbench build and runtime
+- exported ROS2 workspace build in a real ROS2 / MoveIt environment
+- Windows native build
+- cross-compiled runtime execution

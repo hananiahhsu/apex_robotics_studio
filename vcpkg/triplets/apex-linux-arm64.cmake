@@ -1,0 +1,5 @@
+set(VCPKG_TARGET_ARCHITECTURE arm64)
+set(VCPKG_CMAKE_SYSTEM_NAME Linux)
+set(VCPKG_LIBRARY_LINKAGE static)
+set(VCPKG_CRT_LINKAGE dynamic)
+set(VCPKG_CHAINLOAD_TOOLCHAIN_FILE "${CMAKE_CURRENT_LIST_DIR}/../../cmake/toolchains/linux-gcc-aarch64.cmake")

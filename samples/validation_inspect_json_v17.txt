@@ -1,0 +1,10 @@
+ApexRoboticsStudio 1.7.0
+Robotics workstation interview project
+
+Robot description inspection for project: ApexPainterV16 imported project
+Source kind: xacro
+Package dependencies: 1
+Mesh resources: 2
+Resolved meshes: 2
+Missing meshes: 0
+Inspection report written: samples/projects/robot_description_inspection_v17.json

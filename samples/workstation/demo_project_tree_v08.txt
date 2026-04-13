@@ -1,0 +1,30 @@
+ApexRoboticsStudio 0.8.0
+Robotics workstation interview project
+
+Project Catalog
+- [project] Demo Workcell Interview Scenario :: schema=3
+  - [robot] Apex Painter 6A :: 6 joints
+    - [joint] J1 :: link=0.450m range=[-180.000, 180.000]deg
+    - [joint] J2 :: link=0.350m range=[-180.000, 180.000]deg
+    - [joint] J3 :: link=0.300m range=[-180.000, 180.000]deg
+    - [joint] J4 :: link=0.200m range=[-180.000, 180.000]deg
+    - [joint] J5 :: link=0.150m range=[-180.000, 180.000]deg
+    - [joint] J6 :: link=0.100m range=[-180.000, 180.000]deg
+  - [motion] Primary Motion :: 16 samples
+    - [state] Start :: 0.0, 10.0, 20.0, -15.0, 5.0, 0.0
+    - [state] Goal :: 35.0, 25.0, -30.0, 15.0, -20.0, 10.0
+  - [workcell] Obstacles :: 4 entries
+    - [obstacle] Fixture_A :: min=(0.550, 0.100, -0.200) max=(0.850, 0.400, 0.200)
+    - [obstacle] Safety_Fence :: min=(1.250, -0.900, -0.500) max=(1.400, 0.900, 0.500)
+    - [obstacle] Table :: min=(0.250, -0.700, -0.200) max=(0.850, -0.450, 0.150)
+    - [obstacle] PaintBooth :: min=(0.900, 0.550, -0.100) max=(1.250, 0.950, 0.750)
+  - [job] Door Panel Paint Cycle :: 4 segments
+    - [waypoint] Home :: 0.0, 15.0, 20.0, -15.0, 0.0, 0.0
+    - [waypoint] Approach :: 18.0, 22.0, 5.0, -10.0, -8.0, 4.0
+    - [waypoint] SprayStart :: 28.0, 18.0, -15.0, 10.0, -14.0, 9.0
+    - [waypoint] SprayEnd :: 36.0, 12.0, -22.0, 16.0, -18.0, 12.0
+    - [waypoint] Retreat :: 14.0, 10.0, 14.0, -6.0, 6.0, 2.0
+    - [segment] MoveToApproach :: Home -> Approach | samples=12 | duration=2s | tag=approach
+    - [segment] PaintStrokeA :: Approach -> SprayStart | samples=18 | duration=2.5s | tag=spray
+    - [segment] PaintStrokeB :: SprayStart -> SprayEnd | samples=18 | duration=2.5s | tag=spray
+    - [segment] MoveToHome :: SprayEnd -> Retreat | samples=12 | duration=2s | tag=retreat

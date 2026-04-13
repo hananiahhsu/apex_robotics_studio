@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Apex Robotics Studio Report</title>
+  <style>body{font-family:Arial,sans-serif;background:#0f172a;color:#e2e8f0;margin:0;padding:32px;}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:24px;}.card{background:#111827;border:1px solid #334155;border-radius:12px;padding:16px;}table{border-collapse:collapse;width:100%;margin-top:12px;}th,td{border-bottom:1px solid #334155;padding:10px;text-align:left;}h1,h2{margin:0 0 12px 0;} .warn{color:#fbbf24;} .bad{color:#f87171;} .good{color:#4ade80;} svg{max-width:100%;height:auto;border-radius:12px;}</style>
+</head>
+<body>
+<h1>Apex Robotics Studio - Workcell Analysis Report</h1>
+<p>Project: <strong>Demo Workcell Interview Scenario</strong> | Robot: <strong>Apex Painter 6A</strong></p>
+<div class="grid">
+  <div class="card"><h2>Trajectory</h2><div>Samples: 16</div><div>Cycle time: 4 s</div><div>Path length: 0.716317 m</div></div>
+  <div class="card"><h2>Quality</h2><div class="bad">Collision free: NO</div><div>Collision samples: 16</div><div>Peak TCP speed: 0.17995 m/s</div></div>
+  <div class="card"><h2>Project</h2><div>Joints: 6</div><div>Obstacles: 3</div><div>Safety radius: 0.08 m</div></div>
+</div>
+<div class="card"><h2>Top View</h2><svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect x="0" y="0" width="100%" height="100%" fill="#0b1320"/>
+  <text x="40" y="44" fill="#f5f7fa" font-size="28" font-family="Arial">Demo Workcell Interview Scenario</text>
+  <text x="40" y="72" fill="#9fb3c8" font-size="16" font-family="Arial">Robot: Apex Painter 6A | Obstacles: 3 | Samples: 16</text>
+  <rect x="267.778" y="286.667" width="113.333" height="113.333" fill="#364152" stroke="#8aa1b6" stroke-width="2" opacity="0.9"/>
+  <text x="273.778" y="304.667" fill="#ffffff" font-size="14" font-family="Arial">Fixture_A</text>
+  <rect x="418.889" y="135.556" width="56.6667" height="604.444" fill="#364152" stroke="#8aa1b6" stroke-width="2" opacity="0.9"/>
+  <text x="424.889" y="153.556" fill="#ffffff" font-size="14" font-family="Arial">Safety_Fence</text>
+  <rect x="173.333" y="456.667" width="226.667" height="75.5556" fill="#364152" stroke="#8aa1b6" stroke-width="2" opacity="0.9"/>
+  <text x="179.333" y="474.667" fill="#ffffff" font-size="14" font-family="Arial">Table</text>
+  <polyline fill="none" stroke="#2dd4bf" stroke-width="4" points="620.093,306.294 617.325,288.378 613.74,270.609 609.345,253.025 604.152,235.668 598.173,218.574 591.423,201.783 583.917,185.332 575.675,169.256 566.716,153.591 557.061,138.371 546.736,123.629 535.764,109.397 524.173,95.7042 511.99,82.5804 499.246,70.0527"/>
+  <circle cx="620.093" cy="306.294" r="7" fill="#ef4444"/>
+  <circle cx="617.325" cy="288.378" r="7" fill="#ef4444"/>
+  <circle cx="613.74" cy="270.609" r="7" fill="#ef4444"/>
+  <circle cx="609.345" cy="253.025" r="7" fill="#ef4444"/>
+  <circle cx="604.152" cy="235.668" r="7" fill="#ef4444"/>
+  <circle cx="598.173" cy="218.574" r="7" fill="#ef4444"/>
+  <circle cx="591.423" cy="201.783" r="7" fill="#ef4444"/>
+  <circle cx="583.917" cy="185.332" r="7" fill="#ef4444"/>
+  <circle cx="575.675" cy="169.256" r="7" fill="#ef4444"/>
+  <circle cx="566.716" cy="153.591" r="7" fill="#ef4444"/>
+  <circle cx="557.061" cy="138.371" r="7" fill="#ef4444"/>
+  <circle cx="546.736" cy="123.629" r="7" fill="#ef4444"/>
+  <circle cx="535.764" cy="109.397" r="7" fill="#ef4444"/>
+  <circle cx="524.173" cy="95.7042" r="7" fill="#ef4444"/>
+  <circle cx="511.99" cy="82.5804" r="7" fill="#ef4444"/>
+  <circle cx="499.246" cy="70.0527" r="7" fill="#ef4444"/>
+  <polyline fill="none" stroke="#60a5fa" stroke-width="5" points="60,437.778 230,437.778 360.213,414.818 458.363,358.151 531.344,338.596 584.593,319.215 620.093,306.294"/>
+  <polyline fill="none" stroke="#f59e0b" stroke-width="5" points="60,437.778 199.256,340.27 265.367,225.762 363.517,169.095 416.942,115.669 468.3,91.7211 499.246,70.0527"/>
+</svg>
+</div>
+<div class="card"><h2>Joint Velocity Metrics</h2><table><thead><tr><th>Joint</th><th>Max |vel| (rad/s)</th><th>Preferred limit</th><th>Status</th></tr></thead><tbody>
+<tr><td>J1</td><td>0.152716</td><td>1.5</td><td class="good">OK</td></tr>
+<tr><td>J2</td><td>0.0654498</td><td>1.5</td><td class="good">OK</td></tr>
+<tr><td>J3</td><td>0.218166</td><td>1.5</td><td class="good">OK</td></tr>
+<tr><td>J4</td><td>0.1309</td><td>1.5</td><td class="good">OK</td></tr>
+<tr><td>J5</td><td>0.109083</td><td>1.5</td><td class="good">OK</td></tr>
+<tr><td>J6</td><td>0.0436332</td><td>1.5</td><td class="good">OK</td></tr>
+</tbody></table></div>
+<div class="card"><h2>Warnings</h2><ul>
+<li class="warn">Trajectory collides with the workcell.</li>
+</ul></div>
+</body>
+</html>

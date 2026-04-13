@@ -1,0 +1,7 @@
+ApexRoboticsStudio 1.2.0
+Robotics workstation interview project
+
+Robot description imported from Xacro: /mnt/data/work_v13/apex_robotics_studio_v13/samples/xacro/demo_painter_cell_v13.xacro
+Generated project: /mnt/data/work_v13/apex_robotics_studio_v13/samples/projects/imported_from_xacro_v13.arsproject
+Imported revolute joints: 1 / 1
+Mesh resources captured: 1

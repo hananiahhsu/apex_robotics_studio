@@ -1,0 +1,9 @@
+{
+  "default-registry": {
+    "kind": "builtin",
+    "baseline": "PLEASE_REPLACE_WITH_YOUR_COMPANY_APPROVED_VCPKG_BASELINE"
+  },
+  "overlay-triplets": [
+    "vcpkg/triplets"
+  ]
+}

@@ -1,0 +1,29 @@
+ApexRoboticsStudio v1.0 local validation
+
+Environment
+- Host: Linux container
+- Compiler: GCC 14
+- Generator: Unix Makefiles
+- Build type: Release
+
+Validated
+- cmake -S . -B out/build/v10 -DCMAKE_BUILD_TYPE=Release
+- cmake --build out/build/v10 -j2
+- ctest --output-on-failure
+- ./apex_robotics_studio export-demo-project samples/projects/demo_workcell_v10.arsproject
+- ./apex_robotics_studio export-runtime-config config/runtime_v10.ini
+- ./apex_robotics_studio export-approval-template samples/governance/demo_workcell_v10.arsapproval
+- ./apex_robotics_studio sign-project ... robotics_lead alice approved
+- ./apex_robotics_studio sign-project ... process_owner bob approved
+- ./apex_robotics_studio sign-project ... qa carol approved
+- ./apex_robotics_studio verify-approval ... samples/governance/demo_approval_report_v10.html
+- ./apex_robotics_studio create-project-snapshot ... samples/snapshots/demo_snapshot_v10
+- ./apex_robotics_studio restore-project-snapshot ... samples/snapshots/restored_demo_workcell_v10.arsproject
+- ./apex_robotics_studio export-integration-package ... samples/integration/demo_integration_package_v10
+- ./apex_robotics_studio export-integration-package ... samples/integration/demo_integration_package_v10_pass
+
+Notes
+- Linux host build and tests were executed successfully.
+- Windows native build was not executed in this environment.
+- Cross-compiled Windows and ARM64 runtime validation were not executed in this environment.
+- Qt frontend was not compiled in this environment because Qt SDK is unavailable here.

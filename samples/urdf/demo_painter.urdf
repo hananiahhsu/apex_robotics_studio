@@ -1,0 +1,25 @@
+<robot name="DemoPainter6A">
+  <joint name="joint_1" type="revolute">
+    <origin xyz="0.45 0 0" rpy="0 0 0"/>
+    <limit lower="-3.14" upper="3.14" effort="100" velocity="1.5"/>
+  </joint>
+  <joint name="joint_2" type="revolute">
+    <origin xyz="0.35 0 0" rpy="0 0 0"/>
+    <limit lower="-2.50" upper="2.50" effort="100" velocity="1.5"/>
+  </joint>
+  <joint name="joint_3" type="revolute">
+    <origin xyz="0.30 0 0" rpy="0 0 0"/>
+    <limit lower="-2.50" upper="2.50" effort="100" velocity="1.5"/>
+  </joint>
+  <joint name="joint_4" type="revolute">
+    <origin xyz="0.20 0 0" rpy="0 0 0"/>
+    <limit lower="-3.14" upper="3.14" effort="100" velocity="2.0"/>
+  </joint>
+  <joint name="joint_5" type="revolute">
+    <origin xyz="0.15 0 0" rpy="0 0 0"/>
+    <limit lower="-2.00" upper="2.00" effort="100" velocity="2.0"/>
+  </joint>
+  <joint name="joint_6" type="continuous">
+    <origin xyz="0.10 0 0" rpy="0 0 0"/>
+  </joint>
+</robot>

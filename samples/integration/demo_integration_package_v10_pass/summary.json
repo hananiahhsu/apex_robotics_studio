@@ -1,0 +1,13 @@
+{
+  "project_name": "Demo Workcell Interview Scenario",
+  "project_fingerprint": "d9a46d9ad48e1e6f",
+  "exported_at_utc": "2026-04-11T08:33:57Z",
+  "gate_status": "PASS",
+  "approval_decision": "approved",
+  "collision_free": true,
+  "segment_count": 4,
+  "obstacle_count": 0,
+  "finding_count": 1,
+  "total_duration_seconds": 9,
+  "total_path_length_meters": 0.793836
+}

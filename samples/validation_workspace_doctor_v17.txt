@@ -1,0 +1,18 @@
+Apex ROS2 Workspace Doctor
+Workspace: /tmp/apex_v17_work/apex_robotics_studio_v17/samples/ros2/generated_v17/apex_ros2_ws
+Manifest : /tmp/apex_v17_work/apex_robotics_studio_v17/samples/ros2/generated_v17/apex_ros2_ws/workspace_manifest.json
+All generated packages are present.
+Manifest summary:
+{
+  "project_name": "ApexPainterV16 imported project",
+  "robot_name": "ApexPainterV16",
+  "packages": [
+    "apexpainterv16_imported_project_description",
+    "apexpainterv16_imported_project_bringup",
+    "apexpainterv16_imported_project_moveit_config",
+    "apexpainterv16_imported_project_moveit_task_demo"
+  ],
+  "description_package_dependencies": [
+    "demo_support"
+  ]
+}

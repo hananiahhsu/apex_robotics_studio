@@ -1,0 +1,10 @@
+{
+  "title": "Project audit trail",
+  "project_name": "Demo Workcell Interview Scenario",
+  "project_fingerprint": "demo-fingerprint-v11",
+  "overall_status": "success",
+  "artifacts": [
+    {"type": "gate", "path": "release_gate.html", "description": "Release gate evaluation"},
+    {"type": "dashboard", "path": "dashboard.html", "description": "Workbench dashboard snapshot"}
+  ]
+}

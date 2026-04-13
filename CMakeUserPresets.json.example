@@ -1,0 +1,22 @@
+{
+  "version": 4,
+  "configurePresets": [
+    {
+      "name": "local-linux-aarch64-env",
+      "inherits": "linux-aarch64-release",
+      "environment": {
+        "ARS_AARCH64_GCC_ROOT": "/opt/toolchains/gcc-aarch64",
+        "ARS_AARCH64_SYSROOT": "/opt/sysroots/ubuntu-22.04-aarch64",
+        "ARS_CROSS_EMULATOR": "/usr/bin/qemu-aarch64-static;-L;/opt/sysroots/ubuntu-22.04-aarch64"
+      }
+    },
+    {
+      "name": "local-linux-to-windows-env",
+      "inherits": "linux-to-windows-x64-release",
+      "environment": {
+        "ARS_MINGW_ROOT": "/usr",
+        "ARS_MINGW_SYSROOT": "/usr/x86_64-w64-mingw32"
+      }
+    }
+  ]
+}

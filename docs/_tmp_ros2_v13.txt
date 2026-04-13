@@ -1,0 +1,7 @@
+ApexRoboticsStudio 1.2.0
+Robotics workstation interview project
+
+ROS2 workspace exported: /mnt/data/work_v13/apex_robotics_studio_v13/samples/ros2/generated_v13/apex_ros2_ws
+Bringup package: /mnt/data/work_v13/apex_robotics_studio_v13/samples/ros2/generated_v13/apex_ros2_ws/src/demo_painter_cell_imported_project_bringup
+MoveIt package: /mnt/data/work_v13/apex_robotics_studio_v13/samples/ros2/generated_v13/apex_ros2_ws/src/demo_painter_cell_imported_project_moveit_config
+Generated files: 21

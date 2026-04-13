@@ -1,0 +1,10 @@
+; ApexRoboticsStudio batch manifest
+[batch]
+schema_version=1
+name=Demo Production Validation
+
+[entry]
+name=primary_demo
+project=../projects/demo_workcell_v05.arsproject
+runtime=../../config/runtime_v05.ini
+plugin_directory=../plugins

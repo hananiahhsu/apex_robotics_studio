@@ -1,0 +1,16 @@
+apex_project:
+  ros__parameters:
+    project_name: "DemoPainterXacro6A imported project"
+    robot_name: "DemoPainterXacro6A"
+    planning_group: "manipulator"
+    joint_names:
+    - joint_1
+    - joint_2
+    - joint_3
+    obstacles:
+      - name: "ImportedFixture"
+        min: [0.550000, 0.100000, -0.200000]
+        max: [0.850000, 0.350000, 0.200000]
+      - name: "SafetyZone"
+        min: [0.950000, -0.800000, -0.500000]
+        max: [1.100000, 0.800000, 0.500000]

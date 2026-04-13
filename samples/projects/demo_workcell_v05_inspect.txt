@@ -1,0 +1,16 @@
+ApexRoboticsStudio 0.5.0
+Robotics workstation interview project
+
+Robot: Apex Painter 6A
+Joint count: 6
+  [0] J1 link=0.45 m range=[-180, 180] deg
+  [1] J2 link=0.35 m range=[-180, 180] deg
+  [2] J3 link=0.3 m range=[-180, 180] deg
+  [3] J4 link=0.2 m range=[-180, 180] deg
+  [4] J5 link=0.15 m range=[-180, 180] deg
+  [5] J6 link=0.1 m range=[-180, 180] deg
+Project schema: 2
+Obstacles: 4
+Job: Door Panel Paint Cycle
+Waypoints: 5 Segments: 4
+Plugin findings: 0

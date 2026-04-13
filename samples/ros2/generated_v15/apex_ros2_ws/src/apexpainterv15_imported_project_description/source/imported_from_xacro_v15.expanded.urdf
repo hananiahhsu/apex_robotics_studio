@@ -1,0 +1,43 @@
+<robot  name="ApexPainterV15">
+  
+  
+  
+  
+
+  <link name="base_link"/>
+  
+  
+    
+    <joint name="joint_2" type="revolute">
+      <origin xyz="0.840000 0 0" rpy="0 0 0"/>
+      <limit lower="-1.57" upper="1.57" effort="10" velocity="1.0"/>
+    </joint>
+    
+      <link name="joint_2_tool">
+        <visual>
+          <geometry>
+            <mesh filename="package://demo_support/meshes/tool.stl" scale="1 1 1"/>
+          </geometry>
+        </visual>
+      </link>
+    
+    
+  
+  
+  
+    
+    <joint name="joint_1" type="revolute">
+      <origin xyz="0.420000 0 0" rpy="0 0 0"/>
+      <limit lower="-1.57" upper="1.57" effort="10" velocity="1.0"/>
+    </joint>
+    
+      <link name="joint_1_tool">
+        <visual>
+          <geometry>
+            <mesh filename="package://demo_support/meshes/tool.stl" scale="1 1 1"/>
+          </geometry>
+        </visual>
+      </link>
+    
+    
+</robot>

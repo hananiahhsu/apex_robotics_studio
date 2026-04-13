@@ -1,0 +1,8 @@
+{"sequence":1,"category":"project","level":"info","message":"Loaded project file: demo_workcell_v07.arsproject"}
+{"sequence":2,"category":"job","level":"info","message":"Job contains 4 segments."}
+{"sequence":3,"category":"segment","level":"warning","message":"MoveToApproach duration=2.000000s path=0.429002m"}
+{"sequence":4,"category":"segment","level":"warning","message":"PaintStrokeA duration=2.500000s path=0.071852m"}
+{"sequence":5,"category":"segment","level":"warning","message":"PaintStrokeB duration=2.500000s path=0.044665m"}
+{"sequence":6,"category":"segment","level":"warning","message":"MoveToHome duration=2.000000s path=0.248317m"}
+{"sequence":7,"category":"audit","level":"info","message":"[SampleSafetyAudit] Safety fence obstacle detected."}
+{"sequence":8,"category":"audit","level":"info","message":"[SampleSafetyAudit] Job contains four or more segments and looks suitable for interview demonstration."}

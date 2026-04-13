@@ -1,0 +1,2 @@
+severity,message
+warning,"Workcell does not define any obstacles. Industrial integration review should verify safety fences and fixtures."

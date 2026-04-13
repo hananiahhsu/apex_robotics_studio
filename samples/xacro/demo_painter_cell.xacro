@@ -1,0 +1,13 @@
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="DemoPainterXacro6A">
+  <xacro:include filename="robot_macros.xacro"/>
+  <xacro:property name="L1" value="0.45"/>
+  <xacro:property name="L2" value="0.35"/>
+  <xacro:property name="L3" value="0.30"/>
+  <link name="base_link">
+    <visual><geometry><mesh filename="package://apex_robotics_studio/meshes/base_link.dae" scale="1 1 1"/></geometry></visual>
+    <collision><geometry><mesh filename="package://apex_robotics_studio/meshes/base_link.stl" scale="1 1 1"/></geometry></collision>
+  </link>
+  <xacro:arm_joint joint_name="joint_1" length="${L1}" lower="-3.14" upper="3.14"/>
+  <xacro:arm_joint joint_name="joint_2" length="${L2}" lower="-2.50" upper="2.50"/>
+  <xacro:arm_joint joint_name="joint_3" length="${L3}" lower="-2.50" upper="2.50"/>
+</robot>

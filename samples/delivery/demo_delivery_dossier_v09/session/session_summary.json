@@ -1,0 +1,12 @@
+{
+  "title": "Delivery dossier session",
+  "project_name": "Demo Workcell Interview Scenario",
+  "job_name": "Door Panel Paint Cycle",
+  "status": "warning",
+  "total_duration_seconds": 9,
+  "total_path_length_meters": 0.793836,
+  "finding_count": 0,
+  "warnings": ["Segment 'MoveToApproach' is not collision-free.", "Segment 'PaintStrokeA' is not collision-free.", "Segment 'PaintStrokeB' is not collision-free.", "Segment 'MoveToHome' is not collision-free."],
+  "artifacts": [
+  ]
+}

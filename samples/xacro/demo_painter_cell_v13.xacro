@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<robot name="demo_painter_cell" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:arg name="link_len" default="0.58"/>
+  <xacro:include filename="$(find demo_support)/urdf/arm_macro.xacro"/>
+  <link name="base_link"/>
+  <xacro:apex_arm
+      joint_name="shoulder_joint"
+      parent="base_link"
+      child="arm_link"
+      length="$(arg link_len)"
+      mesh_uri="package://demo_description/meshes/base.dae"/>
+</robot>

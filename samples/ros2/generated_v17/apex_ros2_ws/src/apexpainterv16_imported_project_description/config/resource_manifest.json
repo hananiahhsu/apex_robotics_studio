@@ -1,0 +1,9 @@
+{
+  "project_name": "ApexPainterV16 imported project",
+  "robot_name": "ApexPainterV16",
+  "source_kind": "xacro",
+  "mesh_resources": [
+    {"link_name": "base_link", "role": "visual_mesh", "uri": "package://demo_support/meshes/tool.stl", "package_name": "demo_support", "resolved_path": "/tmp/apex_v17_work/apex_robotics_studio_v17/samples/robot_description_packages/demo_support/meshes/tool.stl", "scale": [1.000000, 1.000000, 1.000000]},
+    {"link_name": "joint_1_tool", "role": "visual_mesh", "uri": "package://demo_support/meshes/tool.stl", "package_name": "demo_support", "resolved_path": "/tmp/apex_v17_work/apex_robotics_studio_v17/samples/robot_description_packages/demo_support/meshes/tool.stl", "scale": [1.000000, 1.000000, 1.000000]}
+  ]
+}

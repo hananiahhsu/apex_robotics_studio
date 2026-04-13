@@ -1,0 +1,17 @@
+<package format="3">
+  <name>apexpainterv15_imported_project_moveit_task_demo</name>
+  <version>0.1.0</version>
+  <description>Apex Robotics Studio generated MoveIt task/demo package.</description>
+  <maintainer email="demo@example.com">Apex Robotics Studio</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend>
+  <depend>moveit_ros_planning_interface</depend>
+  <exec_depend>apexpainterv15_imported_project_description</exec_depend>
+  <exec_depend>apexpainterv15_imported_project_moveit_config</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

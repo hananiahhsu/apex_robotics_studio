@@ -1,0 +1,43 @@
+ApexRoboticsStudio v0.7.0 local validation
+=========================================
+
+Validated in current Linux container:
+
+1. CMake configure
+   cmake -S . -B out/build/linux-debug-v07 -G Ninja -DCMAKE_BUILD_TYPE=Debug -DARS_ENABLE_TESTS=ON -DARS_STRICT_WARNINGS=ON
+
+2. Build
+   cmake --build out/build/linux-debug-v07 -j4
+
+3. Unit tests
+   ctest --output-on-failure
+   Result: 100% tests passed
+
+4. CLI validation
+   ./apex_robotics_studio export-demo-project demo_workcell_v07.arsproject
+   ./apex_robotics_studio project-tree demo_workcell_v07.arsproject
+   ./apex_robotics_studio export-runtime-config runtime_v07.ini
+   ./apex_robotics_studio record-job-session demo_workcell_v07.arsproject apex_session runtime_v07.ini plugins
+   ./apex_robotics_studio dashboard-project demo_workcell_v07.arsproject workstation_dashboard.html runtime_v07.ini plugins
+   ./apex_robotics_studio export-demo-batch demo_validation.arsbatch
+   ./apex_robotics_studio dashboard-batch demo_validation.arsbatch batch_dashboard.html
+
+5. Install and package
+   cmake --install out/build/linux-debug-v07 --prefix out/install/v07
+   cpack
+   Generated:
+   - ApexRoboticsStudio-0.7.0-Linux.zip
+   - ApexRoboticsStudio-0.7.0-Linux.tar.gz
+
+Validated outputs:
+- workstation_dashboard.html
+- batch_dashboard.html
+- apex_session/session_summary.json
+- apex_session/session_events.jsonl
+- apex_session/session_summary.html
+
+Not validated in current container:
+- Qt frontend compilation (Qt SDK unavailable here)
+- Windows native build
+- Linux -> Windows cross-built binary runtime verification
+- Linux -> ARM64 cross-built binary runtime verification

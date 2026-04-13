@@ -1,0 +1,23 @@
+; ApexRoboticsStudio patch file
+
+[patch]
+name=Shift Fixture And Tighten Motion
+notes=Moves a fixture and tightens motion sampling for validation.
+
+[metadata]
+owner=robotics.integration
+
+[motion]
+sample_count=22
+duration_seconds=5
+link_safety_radius=0.1
+
+[add_obstacle]
+name=ScannerStand
+min=0.15,0.55,-0.1
+max=0.28,0.68,0.85
+
+[translate_obstacle]
+name=Fixture_A
+delta=0.06,-0.04,0
+

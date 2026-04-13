@@ -1,0 +1,30 @@
+ApexRoboticsStudio Project Diff
+Entries: 7
+
+[MODIFIED] project/name
+  before: Demo Workcell Interview Scenario
+  after : Demo Workcell Interview Scenario | Patch: Shift Fixture And Tighten Motion
+
+[MODIFIED] metadata/owner
+  before: hananiah
+  after : robotics.integration
+
+[MODIFIED] motion/sample_count
+  before: 16
+  after : 22
+
+[MODIFIED] motion/duration_seconds
+  before: 4
+  after : 5
+
+[MODIFIED] motion/link_safety_radius
+  before: 0.08
+  after : 0.1
+
+[ADDED] obstacles/ScannerStand
+  after : (0.150, 0.550, -0.100) -> (0.280, 0.680, 0.850)
+
+[MODIFIED] obstacles/Fixture_A
+  before: (0.550, 0.100, -0.200) -> (0.850, 0.400, 0.200)
+  after : (0.610, 0.060, -0.200) -> (0.910, 0.360, 0.200)
+

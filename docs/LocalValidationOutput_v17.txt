@@ -1,0 +1,66 @@
+ApexRoboticsStudio v1.7 local validation
+======================================
+
+1) Configure Debug build
+   cmake -S . -B out/build/v17_debug -DCMAKE_BUILD_TYPE=Debug
+   Result: success
+
+2) Build test target
+   cmake --build out/build/v17_debug --target apex_robotics_studio_tests -j1
+   Result: success
+
+3) Build CLI target
+   cmake --build out/build/v17_debug --target apex_robotics_studio -j1
+   Result: success
+
+4) Run tests
+   ctest --test-dir out/build/v17_debug --output-on-failure
+   Result: success (all tests passed)
+
+5) Import package-aware Xacro
+   export ROS_PACKAGE_PATH=$PWD/samples/robot_description_packages
+   ./out/build/v17_debug/apex_robotics_studio import-robot-description \
+     samples/xacro/demo_painter_cell_v17.xacro \
+     samples/projects/imported_from_xacro_v17.arsproject
+   Result: success
+
+6) Inspect robot description assets
+   ./out/build/v17_debug/apex_robotics_studio inspect-robot-description \
+     samples/projects/imported_from_xacro_v17.arsproject \
+     samples/projects/robot_description_inspection_v17.html
+   Result: success
+
+7) Print project tree
+   ./out/build/v17_debug/apex_robotics_studio project-tree \
+     samples/projects/imported_from_xacro_v17.arsproject
+   Result: success
+
+8) Export ROS2 / MoveIt workspace
+   ./out/build/v17_debug/apex_robotics_studio export-ros2-workspace \
+     samples/projects/imported_from_xacro_v17.arsproject \
+     samples/ros2/generated_v17
+   Result: success
+
+9) Run exported workspace doctor script
+   python3 samples/ros2/generated_v17/apex_ros2_ws/workspace_doctor.py
+   Result: success
+
+10) Build sample audit tool for install/package
+    cmake --build out/build/v17_debug --target apex_audit_tool_sample -j1
+    Result: success
+
+11) Install
+    cmake --install out/build/v17_debug --prefix out/install/v17_debug
+    Result: success
+
+12) Package
+    cpack --config out/build/v17_debug/CPackConfig.cmake
+    Result: success
+    Generated artifacts:
+      - ApexRoboticsStudio-1.7.0-Linux.zip
+      - ApexRoboticsStudio-1.7.0-Linux.tar.gz
+
+Notes
+-----
+- Qt workbench source was enhanced but not compiled in this container because Qt SDK is not available here.
+- Exported ROS2 / MoveIt workspace content was generated and structurally validated, but it was not compiled against a real ROS2 / MoveIt SDK in this container.
